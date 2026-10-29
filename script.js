@@ -1,5 +1,5 @@
 /**
- * TEIEN DINING 庭園 ダイニング - JAVASCRIPT LOGIC
+ * KULINER NUSANTARA - JAVASCRIPT LOGIC
  * Interaktivitas Navigasi, Filter Menu, Modal Pesanan, & Formulir Reservasi
  */
 
