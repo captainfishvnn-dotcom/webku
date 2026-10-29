@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Grill & Chill  - Rumah makan dan bistro kuliner autentik Indonesia. Menyajikan aneka masakan tradisional warisan rempah dengan cita rasa terbaik dan harga terjangkau.">
+  <title>Grill & Chill </title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- External Stylesheet (Terpisah) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       1. HEADER & NAVIGASI
+       ========================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <nav class="navbar" id="main-navbar">
+        <!-- Logo Brand & Identitas Usaha -->
+        <a href="#beranda" class="brand-logo" id="brand-link">
+          <div class="brand-icon">
+            <i class="fa-solid fa-utensils"></i>
+          </div>
+          <div class="brand-text-wrap">
+            <span class="brand-name">Grill  </span>
+            <span class="brand-tagline">& chill</span>
+          </div>
+        </a>
+
+        <!-- Menu Navigasi Lokal -->
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#beranda" class="nav-link active">Beranda</a></li>
+          <li><a href="#tentang" class="nav-link">Tentang Kami</a></li>
+          <li><a href="#menu" class="nav-link">Menu Spesial</a></li>
+          <li><a href="#keunggulan" class="nav-link">Keunggulan</a></li>
+          <li><a href="#kontak" class="nav-link">Kontak & Reservasi</a></li>
+        </ul>
+
+        <!-- Tombol Aksi Header -->
+        <div class="nav-actions">
+          <a href="#menu" class="btn btn-primary btn-sm" id="btn-quick-order">
+            <i class="fa-solid fa-bowl-food"></i> Pesan Sekarang
+          </a>
+          <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Buka Menu Navigasi">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       2. BAGIAN BERANDA (HERO SECTION)
+       ========================================================================== -->
+  <section class="hero-section" id="beranda">
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Teks Konten Hero -->
+        <div class="hero-content">
+          <div class="hero-pill">
+            <span class="dot"></span> 100% Halal & Bahan Rempah Segar Pilihan
+          </div>
+          <h1 class="hero-title">
+            Jelajahi Kelezatan Rempah <span class="highlight">Grill & Chill </span>
+          </h1>
+          <p class="hero-description">
+            Selamat datang di Grill & Chill . Kami menghidangkan Daging sapi berkualitas dengan racikan bumbu rempah alami pilihan, diolah oleh koki berpengalaman untuk menghadirkan kehangatan di setiap suapan.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#menu" class="btn btn-primary" id="btn-explore-menu">
+              <i class="fa-solid fa-utensils"></i> Jelajahi Menu
+            </a>
+            <a href="#kontak" class="btn btn-secondary" id="btn-reserve-table">
+              <i class="fa-regular fa-calendar-check"></i> Reservasi Meja
+            </a>
+          </div>
+          <!-- Keunggulan Singkat Hero -->
+          <div class="hero-badges-row">
+            <div class="hero-feature-item">
+              <i class="fa-solid fa-certificate"></i>
+              <span>100% Halal</span>
+            </div>
+            <div class="hero-feature-item">
+              <i class="fa-solid fa-leaf"></i>
+              <span>Bahan Segar Alami</span>
+            </div>
+            <div class="hero-feature-item">
+              <i class="fa-solid fa-fire-burner"></i>
+              <span>Dimasak Fresh Setiap Hari</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gambar Hero & Floating Badge -->
+        <div class="hero-visual">
+          <div class="hero-image-wrapper">
+            <img src="images/steakenak.jpg" alt="Sajian Kuliner Spesial Dapur Rasa Nusantara" id="hero-img">
+            
+            <!-- Floating Badge Kiri Atas -->
+            <div class="floating-badge badge-top-left">
+              <div class="floating-icon">
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="floating-text">
+                <strong>Rating 4.9/5.0</strong>
+                <span>Dari 2.500+ Pelanggan</span>
+              </div>
+            </div>
+
+            <!-- Floating Badge Kanan Bawah -->
+            <div class="floating-badge badge-bottom-right">
+              <div class="floating-icon">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+              <div class="floating-text">
+                <strong>Resep Autentik</strong>
+                <span>Warisan Sejak 2011</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       3. BAGIAN TENTANG KAMI (ABOUT SECTION)
+       ========================================================================== -->
+  <section class="about-section section-padding" id="tentang">
+    <div class="container">
+      <div class="about-grid">
+        <!-- Kolom Gambar Tentang Kami -->
+        <div class="about-image-col">
+          <div class="about-image-card">
+            <img src="images/steakenak.jpg" alt="Suasana dan Hidangan Grill & Chill " id="about-img">
+            <div class="experience-tag">
+              <div class="exp-number">15+</div>
+              <div class="exp-text">Tahun Melayani</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kolom Deskripsi Usaha -->
+        <div class="about-content-col">
+          <div class="section-badge">
+            <i class="fa-solid fa-kitchen-set"></i> Cerita Kami
+          </div>
+          <h2 class="section-title">Melestarikan Warisan Rasa dari Seluruh Penjuru Negeri</h2>
+          <p class="about-lead">
+            Grill & Chill lahir dari kecintaan mendalam terhadap kekayaan kuliner indonesia.
+          </p>
+          <p class="about-text">
+            Berdiri sejak tahun 2011 kami berkomitmen menjaga keaslian resep turun-temurun tanpa bahan pengawet kimia. Setiap porsi hidangan dimasak perlahan menggunakan rempah-rempah asli seperti kunyit, jahe, lengkuas, serai, dan cabai segar pilihan petani .
+          </p>
+          <p class="about-text">
+          mulai dari steak tenderloin, kami memastikan Anda merasakan sensasi makan yang menggugah selera dalam suasana resto yang hangat dan nyaman.
+          </p>
+
+          <!-- 4 Pilar Keunggulan -->
+          <div class="about-pillars">
+            <div class="pillar-item">
+              <div class="pillar-icon"><i class="fa-solid fa-seedling"></i></div>
+              <div>
+                <h4>Rempah Alami Murni</h4>
+                <p>Diolah langsung dari petani tanpa perasa buatan.</p>
+              </div>
+            </div>
+            <div class="pillar-item">
+              <div class="pillar-icon"><i class="fa-solid fa-shield-halved"></i></div>
+              <div>
+                <h4>Higienis & Bersih</h4>
+                <p>Standar kebersihan dapur berstandar mutu terpercaya.</p>
+              </div>
+            </div>
+            <div class="pillar-item">
+              <div class="pillar-icon"><i class="fa-solid fa-users"></i></div>
+              <div>
+                <h4>Koki Ahli</h4>
+                <p>Tangan terampil berpengalaman dalam.</p>
+              </div>
+            </div>
+            <div class="pillar-item">
+              <div class="pillar-icon"><i class="fa-solid fa-wallet"></i></div>
+              <div>
+                <h4>Harga Bersahabat</h4>
+                <p>Kualitas rasa hotel berbintang dengan harga terjangkau.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Banner Angka / Statistik Prestasi -->
+      <div class="stats-banner">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Varian Menu Spesial</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">50.000+</div>
+            <div class="stat-label">Porsi Terhidang</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">4.9/5</div>
+            <div class="stat-label">Rating Kepuasan</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Bahan Baku Halal</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       4. BAGIAN MENU MAKANAN & MINUMAN (MINIMAL 6 PRODUK LOKAL)
+       ========================================================================== -->
+  <section class="menu-section section-padding" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <i class="fa-solid fa-book-open"></i> Pilihan Terbaik
+        </div>
+        <h2 class="section-title">Menu Favorit & Spesial</h2>
+        <p class="section-subtitle">
+          Nikmati aneka pilihan hidangan utama dan minuman penyegar dahaga dengan cita rasa istimewa yang siap memanjakan lidah Anda.
+        </p>
+      </div>
+
+      <!-- Menu Category Filter Tabs -->
+      <div class="menu-filter-bar">
+        <button class="filter-btn active" data-filter="all">
+          <i class="fa-solid fa-border-all"></i> Semua Menu
+        </button>
+        <button class="filter-btn" data-filter="makanan">
+          <i class="fa-solid fa-bowl-rice"></i> Makanan Utama
+        </button>
+        <button class="filter-btn" data-filter="minuman">
+          <i class="fa-solid fa-mug-hot"></i> Minuman Segar
+        </button>
+      </div>
+
+      <!-- CSS GRID: Menampilkan 6 Produk Makanan & Minuman Lengkap -->
+      <div class="menu-grid" id="menu-product-grid">
+
+        <!-- Produk 1: daging tenderloin -->
+        <article class="menu-card" data-category="makanan" id="product-1">
+          <div class="card-media">
+            <img src="images/Tenderloinsteak.jpg" alt="daging sapi asli" loading="lazy">
+            <div class="card-badge-top">
+              <span class="badge-tag badge-category">Makanan</span>
+              <span class="badge-tag badge-bestseller">Best Seller</span>
+            </div>
+            <div class="card-rating">
+              <i class="fa-solid fa-star"></i> 4.9
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="product-title">steak tenderloin</h3>
+            <p class="product-desc">
+              steak tenderloin adalah potongan steak paling empuk,lembut dan premium dari seruluh bagian daging sapi.
+            </p>
+            <div class="card-footer">
+              <div class="price-wrap">
+                <span class="price-label">Harga</span>
+                <span class="product-price">Rp 113.ooo</span>
+              </div>
+              <button class="btn-order-item" title="Pesan Menu Ini" onclick="openOrderModal('steak tenderloin', 133000, 'images/Prime-Tenderloin-Steak.jpg')">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Produk 2: iced lemon tea -->
+        <article class="menu-card" data-category="makanan" id="product-2">
+          <div class="card-media">
+            <img src="images/icelemon.jpg" alt="iced lemon tea" loading="lazy">
+            <div class="card-badge-top">
+              <span class="badge-tag badge-category">Minuman</span>
+              <span class="badge-tag badge-special">Favorit</span>
+            </div>
+            <div class="card-rating">
+              <i class="fa-solid fa-star"></i> 5.0
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="product-title">ice lemon tea</h3>
+            <p class="product-desc">
+              ice lemon tea adalah minuman teh dingin klasik yang memadukan kesegaran teh hitam dengan perasan jeruk.
+            </p>
+            <div class="card-footer">
+              <div class="price-wrap">
+                <span class="price-label">Harga</span>
+                <span class="product-price">Rp 35.000</span>
+              </div>
+              <button class="btn-order-item" title="Pesan Menu Ini" onclick="openOrderModal('iced lemon tea', 35000, 'images/ice lemon tea (1).jpg')">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Produk 3: Spaghetti agio olio -->
+        <article class="menu-card" data-category="makanan" id="product-3">
+          <div class="card-media">
+            <img src="images/spaghetti.jpg" alt="spaghetti" loading="lazy">
+            <div class="card-badge-top">
+              <span class="badge-tag badge-category">Makanan</span>
+              <span class="badge-tag badge-bestseller">Favorit</span>
+            </div>
+            <div class="card-rating">
+              <i class="fa-solid fa-star"></i> 4.8
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="product-title">spaghetti cumi</h3>
+            <p class="product-desc">
+              spaghetti cumi adalah spaghetti yang terkenal dengan kesederhanaannya yang elegan dan rasa gurih yang memikat.
+            </p>
+            <div class="card-footer">
+              <div class="price-wrap">
+                <span class="price-label">Harga</span>
+                <span class="product-price">Rp 40.000</span>
+              </div>
+              <button class="btn-order-item" title="Pesan Menu Ini" onclick="openOrderModal('spaghetti cumi', 40000, 'images/spaghetti agio olio.jpg')">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Produk 4: chicken cordon bleu -->
+        <article class="menu-card" data-category="makanan" id="product-4">
+          <div class="card-media">
+            <img src="images/chiken.jpg" alt="chicken cordon bleu" loading="lazy">
+            <div class="card-badge-top">
+              <span class="badge-tag badge-category">Makanan</span>
+            </div>
+            <div class="card-rating">
+              <i class="fa-solid fa-star"></i> 4.9
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="product-title">chicken cordon bleu</h3>
+            <p class="product-desc">
+              hidangan khas Eropa yang terbuat dari irisan dada ayam fillet yang dipipihkan, diisi dengan daging ham, serta keju lalu di gulung rapat.
+            </p>
+            <div class="card-footer">
+              <div class="price-wrap">
+                <span class="price-label">Harga</span>
+                <span class="product-price">Rp 55.000</span>
+              </div>
+              <button class="btn-order-item" title="Pesan Menu Ini" onclick="openOrderModal('chicken cordon bleu', 55000, 'images/chicken cordon bleu.jpg')">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Produk 5: us ribeye steak -->
+        <article class="menu-card" data-category="makanan" id="product-5">
+          <div class="card-media">
+            <img src="images/usribeye.jpg" alt="ribeye steak" loading="lazy">
+            <div class="card-badge-top">
+              <span class="badge-tag badge-category">Makanan</span>
+              <span class="badge-tag badge-special">Favorit</span>
+            </div>
+            <div class="card-rating">
+              <i class="fa-solid fa-star"></i> 4.9
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="product-title"> ribeye steak</h3>
+            <p class="product-desc">
+            Ribeye Steak adalah salah satu potongan daging sapi premium yang paling populer karena memiliki rasa yang sangat gurih, kaya, dan tekstur yang sangat empuk.
+            </p>
+            <div class="card-footer">
+              <div class="price-wrap">
+                <span class="price-label">Harga</span>
+                <span class="product-price">Rp 121.000</span>
+              </div>
+              <button class="btn-order-item" title="Pesan Menu Ini" onclick="openOrderModal(' ribeye steak', 121000, 'images/us ribeye(1).jpg')">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        
+
+        
+        <!-- Produk 6: Es Teh Manis Melati Jumbo -->
+        <article class="menu-card" data-category="minuman" id="product-8">
+          <div class="card-media">
+            <img src="images/esteh.jpg" alt="Es Teh Manis Melati Jumbo" loading="lazy">
+            <div class="card-badge-top">
+              <span class="badge-tag badge-category">Minuman</span>
+              <span class="badge-tag badge-special">Segar Alami</span>
+            </div>
+            <div class="card-rating">
+              <i class="fa-solid fa-star"></i> 4.8
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="product-title">Es Teh Manis Melati Jumbo</h3>
+            <p class="product-desc">
+              Seduhan daun teh melati pilihan yang harum wangi semerbak, dipadukan manisnya gula tebu alami dan es batu kristal berlimpah dalam gelas ukuran jumbo yang memuaskan dahaga.
+            </p>
+            <div class="card-footer">
+              <div class="price-wrap">
+                <span class="price-label">Harga</span>
+                <span class="product-price">Rp 8.000</span>
+              </div>
+              <button class="btn-order-item" title="Pesan Menu Ini" onclick="openOrderModal('Es Teh Manis Melati Jumbo', 8000, 'images/es-teh.jpg')">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       5. BAGIAN KEUNGGULAN (FEATURES SECTION)
+       ========================================================================== -->
+  <section class="features-section section-padding" id="keunggulan">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <i class="fa-solid fa-award"></i> Komitmen Kami
+        </div>
+        <h2 class="section-title">Mengapa Memilih Grill & Chill ?</h2>
+        <p class="section-subtitle">
+          Kenyamanan Anda dan kualitas cita rasa makanan adalah prioritas tertinggi yang kami pegang teguh setiap hari.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-box">
+          <div class="feature-icon-circle">
+            <i class="fa-solid fa-pepper-hot"></i>
+          </div>
+          <h3 class="feature-title">Rempah Murni Pilihan</h3>
+          <p class="feature-text">
+            Bumbu diracik segar dari rempah-rempah alami terbaik tanpa penyedap berlebih atau bahan kimia berbahaya.
+          </p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-circle">
+            <i class="fa-solid fa-hand-sparkles"></i>
+          </div>
+          <h3 class="feature-title">Kebersihan Standar Tinggi</h3>
+          <p class="feature-text">
+            Seluruh proses pengolahan bahan hingga penyajian di meja tamu selalu mematuhi protokol higienitas ketat.
+          </p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-circle">
+            <i class="fa-solid fa-truck-fast"></i>
+          </div>
+          <h3 class="feature-title">Penyajian Cepat & Hangat</h3>
+          <p class="feature-text">
+            Didukung manajemen dapur yang gesit sehingga pesanan Anda tiba di meja dengan hangat dan dalam waktu singkat.
+          </p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-circle">
+            <i class="fa-solid fa-heart-circle-check"></i>
+          </div>
+          <h3 class="feature-title">Pelayanan Ramah Kekeluargaan</h3>
+          <p class="feature-text">
+            Staf kami yang ramah siap melayani kebutuhan makan bersama keluarga, teman kerja, hingga acara arisan dan reuni.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6. BAGIAN KONTAK & RESERVASI (CONTACT SECTION)
+       ========================================================================== -->
+  <section class="contact-section section-padding" id="kontak">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <i class="fa-solid fa-envelope-open-text"></i> Hubungi Kami
+        </div>
+        <h2 class="section-title">Reservasi Meja & Layanan Kontak</h2>
+        <p class="section-subtitle">
+          Ingin memesan tempat terlebih dahulu, memesan katering, atau memiliki pertanyaan? Hubungi kami langsung atau isi formulir di bawah ini.
+        </p>
+      </div>
+
+      <div class="contact-layout">
+        <!-- Informasi Usaha & Lokasi -->
+        <div class="contact-info-col">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Alamat Restoran</h4>
+              <p>Jl. Kuliner Rempah No. 88, Kebayoran Baru, Jakarta pusat, DKI Jakarta 12160</p>
+              <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">Buka di Google Maps <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Jam Operasional</h4>
+              <p>Senin – Jumat: 10.00 – 22.00 WIB</p>
+              <p>Sabtu – Minggu: 09.00 – 23.00 WIB</p>
+              <span style="color: var(--accent-green); font-size: 0.85rem; font-weight: 700;">
+                <i class="fa-solid fa-circle-check"></i> Buka Setiap Hari
+              </span>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Telepon & WhatsApp</h4>
+              <p>Layanan Cepat & Informasi: <br>
+                <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer">+62 812-3456-7890</a>
+              </p>
+              <p>Email: <a href="mailto:halo@dapurrasanusantara.id">halo@Grill&Chill .id</a></p>
+            </div>
+          </div>
+
+          <!-- Media Sosial -->
+          <div class="contact-card" style="flex-direction: column; gap: 0.8rem;">
+            <h4 style="font-size: 1.05rem; font-weight: 700; color: var(--dark-color);">Ikuti Media Sosial Kami</h4>
+            <p style="font-size: 0.9rem; color: var(--text-secondary);">Dapatkan update promo menu dan resep menarik setiap minggunya:</p>
+            <div class="social-links">
+              <a href="#kontak" class="social-btn" title="Instagram Grill & Chill "><i class="fa-brands fa-instagram"></i></a>
+              <a href="#kontak" class="social-btn" title="TikTok Grill & Chill "><i class="fa-brands fa-tiktok"></i></a>
+              <a href="#kontak" class="social-btn" title="Facebook Grill & Chill "><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="https://wa.me/6281234567890" class="social-btn" title="WhatsApp Langsung"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulir Pemesanan & Reservasi -->
+        <div class="reservation-card" id="form-container">
+          <h3>Formulir Reservasi Meja</h3>
+          <p>Isi formulir berikut dan tim kami akan segera mengonfirmasi pesanan meja Anda dalam waktu maksimal 15 menit.</p>
+
+          <form id="reservation-form">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="res-name" class="form-label">Nama Lengkap *</label>
+                <input type="text" id="res-name" name="name" placeholder="Contoh: Budi Santoso" required>
+              </div>
+
+              <div class="form-group">
+                <label for="res-phone" class="form-label">Nomor WhatsApp *</label>
+                <input type="tel" id="res-phone" name="phone" placeholder="08123456789" required>
+              </div>
+
+              <div class="form-group">
+                <label for="res-date" class="form-label">Tanggal Kunjungan *</label>
+                <input type="date" id="res-date" name="date" required>
+              </div>
+
+              <div class="form-group">
+                <label for="res-time" class="form-label">Waktu Kedatangan *</label>
+                <input type="time" id="res-time" name="time" required>
+              </div>
+
+              <div class="form-group">
+                <label for="res-guests" class="form-label">Jumlah Orang *</label>
+                <select id="res-guests" name="guests" required>
+                  <option value="" disabled selected>Pilih Jumlah Tamu</option>
+                  <option value="1-2">1 - 2 Orang</option>
+                  <option value="3-5">3 - 5 Orang (Keluarga Kecil)</option>
+                  <option value="6-10">6 - 10 Orang (Rombongan)</option>
+                  <option value="10+">Lebih dari 10 Orang (Acara/Arisan)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="res-menu-pick" class="form-label">Menu Pilihan Favorit</label>
+                <select id="res-menu-pick" name="menu_pick">
+                  <option value="Belum Memilih">Pilih Nanti di Resto</option>
+                  <option value="steak tenderloin">steak tenderloin</option>
+                  <option value="ice lemon tea">ice lemon tea</option>
+                  <option value="Spaghetti cumi">spaghetti cumi</option>
+                  <option value="chicken cordon bleu">chicken cordon bleu</option>
+                  <option value=" ribeye steak"> ribeye steak</option>
+                  
+                </select>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="res-notes" class="form-label">Catatan Tambahan (Opsional)</label>
+                <textarea id="res-notes" name="notes" placeholder="Contoh: Meja dekat jendela, perayaan ulang tahun, atau request tingkat kepedasan..."></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit-btn" id="btn-submit-reservation">
+              <i class="fa-solid fa-paper-plane"></i> Kirim Konfirmasi Reservasi
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       7. BAGIAN FOOTER
+       ========================================================================== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Kolom 1: Profil Usaha -->
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-bottom: 1.2rem;">
+            <div class="brand-icon">
+              <i class="fa-solid fa-utensils"></i>
+            </div>
+            <div class="brand-text-wrap">
+              <span class="brand-name" style="color: #ffffff;">Grill & Chill </span>
+              <span class="brand-tagline">Nusantara</span>
+            </div>
+          </div>
+          <p>
+            Rumah makan berkonsep bistro tradisional yang berdedikasi menyajikan aneka mahakarya kuliner nusantara ber tema eropadengan bahan-bahan rempah alami berkualitas tinggi, higienis, dan terjangkau.
+          </p>
+          <div class="social-links" style="margin-top: 1.2rem;">
+            <a href="#beranda" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#beranda" class="social-btn" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#beranda" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://wa.me/6281234567890" class="social-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Kolom 2: Navigasi Cepat -->
+        <div class="footer-col">
+          <h4>Navigasi Cepat</h4>
+          <nav class="footer-nav">
+            <a href="#beranda"><i class="fa-solid fa-angle-right"></i> Beranda</a>
+            <a href="#tentang"><i class="fa-solid fa-angle-right"></i> Tentang Kami</a>
+            <a href="#menu"><i class="fa-solid fa-angle-right"></i> Menu Spesial</a>
+            <a href="#keunggulan"><i class="fa-solid fa-angle-right"></i> Keunggulan Resto</a>
+            <a href="#kontak"><i class="fa-solid fa-angle-right"></i> Kontak & Reservasi</a>
+          </nav>
+        </div>
+
+        <!-- Kolom 3: Jam Layanan -->
+        <div class="footer-col">
+          <h4>Jam Layanan</h4>
+          <div class="opening-hours-card">
+            <div class="day">Senin - Jumat</div>
+            <div class="time">10.00 - 22.00 WIB</div>
+            <hr style="margin: 0.8rem 0; border: none; border-top: 1px dashed rgba(255,255,255,0.15);">
+            <div class="day">Sabtu - Minggu</div>
+            <div class="time">09.00 - 23.00 WIB</div>
+          </div>
+          <p style="margin-top: 1rem; font-size: 0.82rem; color: #a89488;">
+            * Layanan pesan antar dan reservasi tempat tetap dilayani saat hari libur nasional.
+          </p>
+        </div>
+
+        <!-- Kolom 4: Kontak Cepat -->
+        <div class="footer-col">
+          <h4>Hubungi Kami</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Jl. Kuliner Rempah No. 88, Kebayoran Baru, pusat</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <span>+62 812-3456-7890</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <span>halo@Grill&Chill.id</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar Hak Cipta -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 <strong>Grill & Chill </strong>. Hak Cipta Dilindungi Undang-Undang.
+        </div>
+        <div>
+          Dirancang untuk Cita Rasa Terbaik Kuliner Indonesia.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       8. MODAL INTERAKTIF PEMESANAN MENU (ORDER POPUP)
+       ========================================================================== -->
+  <div class="modal-overlay" id="orderModal">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="modalCloseBtn" onclick="closeOrderModal()" aria-label="Tutup Jendela Modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--dark-color); margin-bottom: 0.3rem;">
+        Konfirmasi Pesanan Menu
+      </h3>
+      <p style="font-size: 0.88rem; color: var(--text-secondary);">
+        Silakan tentukan jumlah porsi yang ingin Anda pesan:
+      </p>
+
+      <div class="modal-product-preview">
+        <img src="images/hero.jpg" alt="Preview Menu" id="modalProductImg" class="modal-product-img">
+        <div>
+          <h4 id="modalProductName" style="font-size: 1.05rem; font-weight: 700; color: var(--dark-color);">Nama Menu</h4>
+          <span id="modalProductPrice" style="font-size: 1.1rem; font-weight: 800; color: var(--primary-color);">Rp 0</span>
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; margin: 1.2rem 0;">
+        <span style="font-weight: 600; font-size: 0.95rem; color: var(--dark-color);">Jumlah Porsi:</span>
+        <div class="modal-qty-control">
+          <button class="qty-btn" type="button" onclick="changeModalQty(-1)">-</button>
+          <input type="text" id="modalQtyInput" class="qty-input" value="1" readonly>
+          <button class="qty-btn" type="button" onclick="changeModalQty(1)">+</button>
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-top: 1px dashed var(--border-color); margin-bottom: 1.2rem;">
+        <span style="font-weight: 700; color: var(--dark-color);">Total Pembayaran:</span>
+        <span id="modalTotalPrice" style="font-size: 1.3rem; font-weight: 800; color: var(--primary-color);">Rp 0</span>
+      </div>
+
+      <div style="display: flex; gap: 0.8rem; flex-direction: column;">
+        <button type="button" class="btn btn-whatsapp" id="btn-confirm-wa" onclick="sendOrderViaWhatsApp()">
+          <i class="fa-brands fa-whatsapp"></i> Pesan Langsung via WhatsApp
+        </button>
+        <button type="button" class="btn btn-secondary" onclick="closeOrderModal()">
+          Batal & Kembali ke Menu
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification Toast -->
+  <div class="toast-msg" id="toastMsg">
+    <i class="fa-solid fa-circle-check" style="color: #2b8a3e; font-size: 1.3rem;"></i>
+    <span id="toastText">Pemberitahuan</span>
+  </div>
+
+  <!-- JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
