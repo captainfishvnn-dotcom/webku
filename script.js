@@ -11,12 +11,125 @@ let currentProduct = {
   img: ''
 };
 
+// Data Menu Kuliner Nusantara Sesuai File Gambar JPG Lokal
+const menuData = [
+    {
+        id: "tenderloin-lokal",
+        name: "Steak Daging Sapi Lokal Special",
+        category: "makanan",
+        price: 95000,
+        img: "Tenderloinsteak.jpg",
+        desc: "Daging sapi pilihan khas Nusantara dengan bumbu rempah tradisional yang meresap sempurna, disajikan dengan saus lada hitam.",
+        time: 35,
+        difficulty: "Sedang",
+        servings: 1
+    },
+    {
+        id: "ayam-goreng-rempah",
+        name: "Ayam Goreng Rempah Nusantara",
+        category: "makanan",
+        price: 45000,
+        img: "chiken.jpg",
+        desc: "Ayam goreng dengan balutan bumbu rempah rahasia khas nusantara, renyah di luar, empuk dan juicy di dalam.",
+        time: 25,
+        difficulty: "Mudah",
+        servings: 1
+    },
+    {
+        id: "steak-nusantara",
+        name: "Teien / Dapur Rasa Signature Steak",
+        category: "makanan",
+        price: 110000,
+        img: "steakenak.jpg",
+        desc: "Menu andalan chef kami memadukan potongan daging premium dengan kelezatan kecap manis dan rempah pilihan.",
+        time: 30,
+        difficulty: "Sedang",
+        servings: 1
+    },
+    {
+        id: "ribeye-lokal",
+        name: "Ribeye Sapi Panggang Bumbu Kecap",
+        category: "makanan",
+        price: 135000,
+        img: "usribeye.jpg",
+        desc: "Daging ribeye pilihan berkualitas tinggi dipanggang dengan olesan bumbu kecap manis pedas khas nusantara.",
+        time: 40,
+        difficulty: "Rumit",
+        servings: 1
+    },
+    {
+        id: "mie-goreng-jawa",
+        name: "Mie Goreng Spesial Nusantara",
+        category: "makanan",
+        price: 40000,
+        img: "spaghetti.jpg",
+        desc: "Mie kenyal dimasak dengan bumbu tradisional, suwiran ayam, telur, dan sayuran segar segar kaya rasa.",
+        time: 20,
+        difficulty: "Mudah",
+        servings: 1
+    },
+    {
+        id: "es-teh-manis",
+        name: "Es Teh Manis Melati",
+        category: "minuman",
+        price: 8000,
+        img: "esteh.jpg",
+        desc: "Teh melati pilihan segar beraroma khas disajikan dingin dengan es batu yang menyegarkan hari Anda.",
+        time: 5,
+        difficulty: "Mudah",
+        servings: 1
+    },
+    {
+        id: "es-jeruk-murni",
+        name: "Es Jeruk Peras Segar",
+        category: "minuman",
+        price: 15000,
+        img: "icelemon.jpg",
+        desc: "Perasan jeruk murni segar kaya vitamin C, disajikan dingin untuk menemani santap hidangan Anda.",
+        time: 5,
+        difficulty: "Mudah",
+        servings: 1
+    }
+];
+
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
   initMenuFilter();
   initReservationForm();
   initScrollSpy();
+  renderDynamicMenu();
 });
+
+/* ==========================================================================
+   0. RENDER MENU OTOMATIS KE HTML
+   ========================================================================== */
+function renderDynamicMenu() {
+    const grid = document.getElementById('recipeGrid');
+    if (!grid) return;
+
+    grid.innerHTML = menuData.map(item => `
+        <div class="menu-card bg-white rounded-2xl overflow-hidden border border-amber-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group" data-category="${item.category}">
+            <div class="relative h-48 overflow-hidden bg-slate-100">
+                <img src="${item.img}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span class="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-md text-white text-[11px] font-medium px-2.5 py-1 rounded-lg">
+                    <i class="fa-solid fa-utensils text-amber-400 mr-1"></i>${item.category.toUpperCase()}
+                </span>
+            </div>
+            <div class="p-5 flex-grow flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-slate-900 text-lg group-hover:text-amber-600 transition-colors line-clamp-1">${item.name}</h3>
+                    <p class="text-slate-500 text-xs mt-1.5 line-clamp-2 font-normal">${item.desc}</p>
+                </div>
+                <div class="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between">
+                    <span class="font-bold text-amber-700 text-base">${formatRupiah(item.price)}</span>
+                    <button onclick="openOrderModal('${item.name}', ${item.price}, '${item.img}')" class="bg-amber-600 hover:bg-amber-700 text-white text-xs font-semibold px-3.5 py-2 rounded-xl transition-all shadow-sm">
+                        Pesan Menu
+                    </button>
+                </div>
+            </div>
+        </div>
+    `).join('');
+}
 
 /* ==========================================================================
    1. NAVBAR & MOBILE DRAWER LOGIC
@@ -27,7 +140,6 @@ function initNavbar() {
   const navMenu = document.getElementById('nav-menu');
   const navLinks = document.querySelectorAll('.nav-link');
 
-  // Sticky Header Effect saat di-scroll
   window.addEventListener('scroll', () => {
     if (window.scrollY > 40) {
       header.classList.add('scrolled');
@@ -36,7 +148,6 @@ function initNavbar() {
     }
   });
 
-  // Toggle Menu Mobile
   if (toggleBtn && navMenu) {
     toggleBtn.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -53,7 +164,6 @@ function initNavbar() {
       }
     });
 
-    // Menutup menu saat klik sembarang di luar menu
     document.addEventListener('click', (e) => {
       if (!navMenu.contains(e.target) && !toggleBtn.contains(e.target) && navMenu.classList.contains('open')) {
         navMenu.classList.remove('open');
@@ -65,7 +175,6 @@ function initNavbar() {
       }
     });
 
-    // Menutup menu saat salah satu link navigasi ditekan
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
         if (navMenu.classList.contains('open')) {
@@ -82,7 +191,7 @@ function initNavbar() {
 }
 
 /* ==========================================================================
-   2. SCROLLSPY (INDIKATOR LINK AKTIF SAAT SCROLL)
+   2. SCROLLSPY
    ========================================================================== */
 function initScrollSpy() {
   const sections = document.querySelectorAll('section[id], header[id]');
@@ -109,19 +218,18 @@ function initScrollSpy() {
 }
 
 /* ==========================================================================
-   3. FILTER MENU KATEGORI (SEMUA / MAKANAN / MINUMAN)
+   3. FILTER MENU KATEGORI
    ========================================================================== */
 function initMenuFilter() {
   const filterBtns = document.querySelectorAll('.filter-btn');
-  const menuCards = document.querySelectorAll('.menu-card');
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      // Ubah button aktif
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
       const filterValue = btn.getAttribute('data-filter');
+      const menuCards = document.querySelectorAll('.menu-card');
 
       menuCards.forEach(card => {
         const category = card.getAttribute('data-category');
@@ -162,7 +270,7 @@ function openOrderModal(name, price, img) {
 
   if (modal) {
     modal.classList.add('active');
-    document.body.style.overflow = 'hidden'; // Kunci scroll halaman
+    document.body.style.overflow = 'hidden';
   }
 }
 
@@ -170,11 +278,10 @@ function closeOrderModal() {
   const modal = document.getElementById('orderModal');
   if (modal) {
     modal.classList.remove('active');
-    document.body.style.overflow = ''; // Kembalikan scroll
+    document.body.style.overflow = '';
   }
 }
 
-// Tutup modal jika user klik di luar kotak modal
 window.addEventListener('click', (e) => {
   const modal = document.getElementById('orderModal');
   if (e.target === modal) {
@@ -210,7 +317,6 @@ function sendOrderViaWhatsApp() {
   closeOrderModal();
   showToast(`Pesanan ${currentProduct.name} sedang dialihkan ke WhatsApp...`);
 
-  // Buka WhatsApp di tab baru
   setTimeout(() => {
     window.open(waUrl, '_blank');
   }, 600);
@@ -223,7 +329,6 @@ function initReservationForm() {
   const form = document.getElementById('reservation-form');
 
   if (form) {
-    // Set minimal tanggal kunjungan hari ini
     const dateInput = document.getElementById('res-date');
     if (dateInput) {
       const today = new Date().toISOString().split('T')[0];
@@ -239,15 +344,13 @@ function initReservationForm() {
       const date = document.getElementById('res-date').value;
       const time = document.getElementById('res-time').value;
       const guests = document.getElementById('res-guests').value;
-      const menuPick = document.getElementById('res-menu-pick').value;
 
       if (!name || !phone || !date || !time || !guests) {
         showToast('Mohon lengkapi seluruh kolom yang wajib diisi (*)!');
         return;
       }
 
-      // Simulasi pengiriman reservasi berhasil
-      showToast(`Terima kasih Bapak/Ibu ${name}! Reservasi untuk ${guests} pada ${date} pukul ${time} WIB berhasil dikirim. Tim kami akan menghubungi via WhatsApp.`);
+      showToast(`Terima kasih Bapak/Ibu ${name}! Reservasi meja untuk ${guests} orang pada ${date} pukul ${time} WIB berhasil dikirim.`);
       
       form.reset();
       if (dateInput) {
