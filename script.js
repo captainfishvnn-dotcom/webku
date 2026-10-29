@@ -1,5 +1,5 @@
 /**
- * DAPUR RASA NUSANTARA - JAVASCRIPT LOGIC
+ * TEIEN DINING 庭園 ダイニング - JAVASCRIPT LOGIC
  * Interaktivitas Navigasi, Filter Menu, Modal Pesanan, & Formulir Reservasi
  */
 
@@ -11,81 +11,81 @@ let currentProduct = {
   img: ''
 };
 
-// Data Menu Kuliner Nusantara Sesuai File Gambar JPG Lokal
+// Data Menu Sesuai Persis Nama File Gambar Lokal di Repository Anda
 const menuData = [
     {
-        id: "tenderloin-lokal",
-        name: "Steak Daging Sapi Lokal Special",
+        id: "tenderloin-steak",
+        name: "Teien Special Tenderloin Steak",
         category: "makanan",
-        price: 95000,
-        img: "Tenderloinsteak.jpg",
-        desc: "Daging sapi pilihan khas Nusantara dengan bumbu rempah tradisional yang meresap sempurna, disajikan dengan saus lada hitam.",
+        price: 185000,
+        img: "Tenderloinsteak.jpg", // Sesuai persis: Tenderloinsteak.jpg
+        desc: "Daging sapi tenderloin pilihan dengan tingkat kematangan sempurna, disajikan dengan saus jamur khas Teien Dining.",
         time: 35,
         difficulty: "Sedang",
         servings: 1
     },
     {
-        id: "ayam-goreng-rempah",
-        name: "Ayam Goreng Rempah Nusantara",
+        id: "chicken-steak",
+        name: "Crispy Teien Chicken Steak",
         category: "makanan",
-        price: 45000,
-        img: "chiken.jpg",
-        desc: "Ayam goreng dengan balutan bumbu rempah rahasia khas nusantara, renyah di luar, empuk dan juicy di dalam.",
+        price: 75000,
+        img: "chiken.jpg", // Sesuai persis: chiken.jpg
+        desc: "Filet dada ayam goreng tepung renyah di luar, juicy di dalam, disajikan dengan kentang goreng dan saus blackpepper.",
         time: 25,
         difficulty: "Mudah",
         servings: 1
     },
     {
-        id: "steak-nusantara",
-        name: "Teien / Dapur Rasa Signature Steak",
+        id: "signature-steak",
+        name: "Teien Signature Steak",
         category: "makanan",
-        price: 110000,
-        img: "steakenak.jpg",
-        desc: "Menu andalan chef kami memadukan potongan daging premium dengan kelezatan kecap manis dan rempah pilihan.",
+        price: 160000,
+        img: "steakenak.jpg", // Sesuai persis: steakenak.jpg
+        desc: "Menu andalan Teien Dining dengan racikan bumbu rahasia perpaduan cita rasa oriental dan western yang lezat.",
         time: 30,
         difficulty: "Sedang",
         servings: 1
     },
     {
-        id: "ribeye-lokal",
-        name: "Ribeye Sapi Panggang Bumbu Kecap",
+        id: "us-ribeye-steak",
+        name: "US Prime Ribeye Steak",
         category: "makanan",
-        price: 135000,
-        img: "usribeye.jpg",
-        desc: "Daging ribeye pilihan berkualitas tinggi dipanggang dengan olesan bumbu kecap manis pedas khas nusantara.",
+        price: 210000,
+        img: "usribeye.jpg", // Sesuai persis: usribeye.jpg
+        desc: "Daging ribeye berkualitas tinggi dengan marbling sempurna yang memberikan kelembutan dan kelezatan di tiap gigitan.",
         time: 40,
         difficulty: "Rumit",
         servings: 1
     },
     {
-        id: "mie-goreng-jawa",
-        name: "Mie Goreng Spesial Nusantara",
+        id: "creamy-spaghetti",
+        name: "Teien Creamy Beef Spaghetti",
         category: "makanan",
-        price: 40000,
-        img: "spaghetti.jpg",
-        desc: "Mie kenyal dimasak dengan bumbu tradisional, suwiran ayam, telur, dan sayuran segar segar kaya rasa.",
+        price: 85000,
+        img: "spaghetti.jpg", // Sesuai persis: spaghetti.jpg
+        desc: "Pasta spaghetti al dente berbalut saus krim keju gurih dengan potongan daging sapi asap dan taburan parsley.",
         time: 20,
         difficulty: "Mudah",
         servings: 1
     },
     {
         id: "es-teh-manis",
-        name: "Es Teh Manis Melati",
+        name: "Teien Signature Es Teh Manis",
         category: "minuman",
-        price: 8000,
-        img: "esteh.jpg",
-        desc: "Teh melati pilihan segar beraroma khas disajikan dingin dengan es batu yang menyegarkan hari Anda.",
+        price: 12000,
+        img: "esteh.jpg", // Sesuai persis: esteh.jpg
+        desc: "Teh pilihan beraroma melati segar disajikan dingin dengan es batu yang menyegarkan dahaga.",
         time: 5,
         difficulty: "Mudah",
         servings: 1
     },
     {
-        id: "es-jeruk-murni",
-        name: "Es Jeruk Peras Segar",
+        id: "ice-lemon-tea",
+        name: "Refreshing Ice Lemon Tea",
         category: "minuman",
-        price: 15000,
-        img: "icelemon.jpg",
-        desc: "Perasan jeruk murni segar kaya vitamin C, disajikan dingin untuk menemani santap hidangan Anda.",
+        price: 22000,
+        img: "icelemon.jpg", // Sesuai persis: icelemon.jpg
+        desc: "Kombinasi teh segar dan perasan buah lemon asli pilihan yang kaya vitamin C dan menyegarkan.",
         time: 5,
         difficulty: "Mudah",
         servings: 1
@@ -110,7 +110,7 @@ function renderDynamicMenu() {
     grid.innerHTML = menuData.map(item => `
         <div class="menu-card bg-white rounded-2xl overflow-hidden border border-amber-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group" data-category="${item.category}">
             <div class="relative h-48 overflow-hidden bg-slate-100">
-                <img src="${item.img}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <img src="${item.img}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80';">
                 <span class="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-md text-white text-[11px] font-medium px-2.5 py-1 rounded-lg">
                     <i class="fa-solid fa-utensils text-amber-400 mr-1"></i>${item.category.toUpperCase()}
                 </span>
@@ -306,7 +306,7 @@ function changeModalQty(change) {
 
 function sendOrderViaWhatsApp() {
   const total = currentProduct.price * currentProduct.qty;
-  const message = `Halo Dapur Rasa Nusantara, saya ingin memesan:\n` +
+  const message = `Halo Teien Dining 庭園 ダイニング, saya ingin memesan:\n` +
                   `- Menu: *${currentProduct.name}*\n` +
                   `- Jumlah: *${currentProduct.qty} porsi*\n` +
                   `- Total: *${formatRupiah(total)}*\n\n` +
